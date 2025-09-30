@@ -1,0 +1,31 @@
+Phân tích quy trình nghiệp vụ: Rút tiền từ ATM
+
+Actors (Tác nhân):
+
+	Khách hàng (Customer): Người sử dụng thẻ ATM để rút tiền.
+
+	ATM (System): Máy ATM xử lý yêu cầu.
+
+	Ngân hàng (Bank Server): Hệ thống backend của ngân hàng, xác thực giao dịch và xử lý tài khoản.
+
+Các bước nghiệp vụ chính:
+
+	Khách hàng đưa thẻ vào ATM.
+
+	ATM yêu cầu nhập mã PIN.
+
+	Khách hàng nhập mã PIN.
+
+	ATM gửi thông tin đến Bank Server để xác thực PIN.
+
+	Bank Server xác thực thành công → ATM hiển thị menu.
+
+	Khách hàng chọn “Rút tiền” và nhập số tiền.
+
+	ATM gửi yêu cầu rút tiền đến Bank Server.
+
+	Bank Server kiểm tra số dư, nếu đủ thì chấp nhận và trừ tiền trong tài khoản.
+
+	ATM xuất tiền mặt cho khách hàng.
+
+	ATM in biên lai (nếu có).
