@@ -1,0 +1,91 @@
+MÔ TẢ HỆ THỐNG QUẢN LÝ ĐẶT PHÒNG
+
+  Tác nhân (Actors):
+
+	Khách hàng: đặt phòng, hủy phòng, xem thông tin phòng.
+
+	Lễ tân: xác nhận đặt phòng, làm thủ tục check-in/check-out, in hóa đơn.
+
+	Quản lý: quản lý phòng, quản lý nhân viên, xem báo cáo doanh thu.
+
+	Hệ thống thanh toán (tác nhân ngoài): xử lý giao dịch thanh toán online.
+
+  Chức năng chính (Use Cases):
+
+	Đặt phòng
+
+	Hủy đặt phòng
+
+	Xem thông tin phòng
+
+	Check-in
+
+	Check-out
+
+	Thanh toán
+
+	Quản lý phòng
+
+	Quản lý nhân viên
+
+	Xem báo cáo doanh thu
+
+2 CHỨC NĂNG QUAN TRỌNG
+Use Case 1: Đặt phòng
+
+	Tên Use Case: Đặt phòng
+
+	Tác nhân chính: Khách hàng
+
+	Mô tả ngắn gọn: Khách hàng chọn phòng muốn thuê và tiến hành đặt trước.
+
+	Luồng sự kiện chính:
+
+	Khách hàng đăng nhập vào hệ thống.
+
+	Hệ thống hiển thị danh sách phòng trống.
+
+	Khách hàng chọn phòng và ngày nhận/trả.
+
+	Hệ thống hiển thị chi phí tạm tính.
+
+	Khách hàng xác nhận đặt phòng.
+
+	Hệ thống yêu cầu thanh toán online.
+
+	Khách hàng nhập thông tin thẻ → hệ thống thanh toán xử lý.
+
+	Hệ thống lưu thông tin đặt phòng và gửi xác nhận cho khách hàng.
+
+	Ngoại lệ:
+
+	Ở bước 6: Nếu thanh toán thất bại → báo lỗi, cho phép thử lại.
+
+	Ở bước 3: Nếu phòng đã được đặt trước → báo khách hàng chọn phòng khác.
+
+
+Use Case 2: Check-in
+
+	Tên Use Case: Check-in.
+
+	Tác nhân chính: Lễ tân.
+
+	Mô tả ngắn gọn: Lễ tân xác nhận thông tin đặt phòng của khách và làm thủ tục nhận phòng.
+
+	Luồng sự kiện chính:
+
+	Khách hàng đến quầy lễ tân và cung cấp mã đặt phòng.
+
+	Lễ tân nhập mã đặt phòng vào hệ thống.
+
+	Hệ thống kiểm tra tình trạng đặt phòng.
+
+	Nếu hợp lệ, hệ thống cập nhật trạng thái phòng thành "Đang sử dụng".
+
+	Lễ tân bàn giao chìa khóa/thẻ phòng cho khách.
+
+	Ngoại lệ:
+
+	Nếu mã đặt phòng không tồn tại → báo lỗi.
+
+	Nếu khách đến sớm hơn ngày đặt → lễ tân thông báo chờ.
